@@ -93,7 +93,18 @@ Ensure that the original people array and stuff objects are unchanged
 ------------------------------------------------------------------------------------------------ */
 
 const newState = (arr, obj) => {
-  // Solution code here...
+  const peopleCopy = [arr.people];
+
+  const stuffCopy = [...obj.stuff];
+  stuffCopy.cars = [...stuffCopy.cars, "Ford"];
+  stuffCopy.toothbrush = "brand new";
+  stuffCopy.toys += 1;
+
+  const newStateObj = {
+    people:peopleCopy,
+    stuff:stuffCopy,
+  }
+  return newStateObj;
 };
 
 
