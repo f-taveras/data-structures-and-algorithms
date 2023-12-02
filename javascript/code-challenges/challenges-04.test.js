@@ -28,7 +28,7 @@ Prove that the original people array is unchanged
 ------------------------------------------------------------------------------------------------ */
 
 const addPeople = (arr) => {
-  
+
   const newArray = [...arr];
 
   newArray.unshift('Odie');
@@ -51,8 +51,8 @@ Ensure that the original people array and stuff objects are unchanged
 
 ------------------------------------------------------------------------------------------------ */
 
-const setState = (arr, obj) => {
-  const stState = (arr, obj) => {
+
+  const setState = (arr, obj) => {
     const peopleCopy = [...arr];
     const stuffCopy = {...obj};
 
@@ -64,16 +64,12 @@ const setState = (arr, obj) => {
     return state;
   };
 
-  const people = ['John','Jane','Alice'];
-  const stuff = {
-    fruit: 'Apple', 
-    vehicle:'Car'
-  }
+
 
   const state = setState(people, stuff);
 
-  
-};
+
+
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -93,9 +89,10 @@ Ensure that the original people array and stuff objects are unchanged
 ------------------------------------------------------------------------------------------------ */
 
 const newState = (arr, obj) => {
-  const peopleCopy = [arr.people];
 
-  const stuffCopy = [...obj.stuff];
+  const peopleCopy = [...arr];
+
+  const stuffCopy = {...obj};
   stuffCopy.cars = [...stuffCopy.cars, "Ford"];
   stuffCopy.toothbrush = "brand new";
   stuffCopy.toys += 1;
