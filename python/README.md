@@ -1,5 +1,8 @@
 # Data Structures and Algorithms
 
+
+## Table of content
+
 ## Language: `Python`
 
 ### Folder and Challenge Setup
