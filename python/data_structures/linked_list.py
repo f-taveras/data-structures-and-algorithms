@@ -44,6 +44,28 @@ class LinkedList:
                 return True
             current_node = current_node.next
         return False
+    def length(self):
+        current = self.head
+        count = 0
+        while current:
+            count += 1
+            current = current.next
+        return count
+
+    def kth_from_end(self, k):
+        if k < 0:
+            raise TargetError("k cannot be negative")
+
+        length = self.length()
+        if k >= length:
+            raise TargetError("k is out of range")
+
+        target_index = length - k - 1
+        current = self.head
+        for _ in range(target_index):
+            current = current.next
+        
+        return current.data
 
 class TargetError(Exception):
     def __init__ (self, message="Target operation error in LinkedList"):
