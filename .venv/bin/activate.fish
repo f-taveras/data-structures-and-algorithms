@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/sagitario/CodeFellows/code401/challenge/data-structures-and-algorithms/.venv"
+set -gx VIRTUAL_ENV "/home/sagitarioo/CodeFellows/challenges/data-structures-and-algorithms/.venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
