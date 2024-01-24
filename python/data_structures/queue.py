@@ -1,43 +1,37 @@
 class InvalidOperationError(Exception):
     pass
 
-class QueueNode:
-    def __init__(self, value):
+class Node:
+    def __init__(self, value, next=None):
         self.value = value
-        self.next = None
+        self.next = next
 
 class Queue:
     def __init__(self):
-        self._front = None
-        self._back = None
+        self.front = None
+        self.rear = None
 
-    def enqueue(self, item):
-        new_node = QueueNode(item)
-        if self.is_empty():
-            self._front = self._back = new_node
-        else:
-            self._back.next = new_node
-            self._back = new_node
-
-    def dequeue(self):
-        if self.is_empty():
-            raise InvalidOperationError("Queue is empty")
-        value = self._front.value
-        self._front = self._front.next
-        if self._front is None:
-            self._back = None
-        return value
-
-    @property
-    def front(self):
-        if self.is_empty():
-            raise InvalidOperationError("Queue is empty")
-        return self._front
+    def is_empty(self):
+        return self.front is None
 
     def peek(self):
         if self.is_empty():
-            return None  # or raise an error if that's the expected behavior
-        return self._front.value
+            raise InvalidOperationError("Method not allowed on empty collection")
+        return self.front.value
 
-    def is_empty(self):
-        return self._front is None
+    def enqueue(self, value):
+        node = Node(value)
+        if self.is_empty():
+            self.front = self.rear = node
+        else:
+            self.rear.next = node
+            self.rear = node
+
+    def dequeue(self):
+        if self.is_empty():
+            raise InvalidOperationError("Method not allowed on empty collection")
+        value = self.front.value
+        self.front = self.front.next
+        if self.front is None:
+            self.rear = None
+        return value

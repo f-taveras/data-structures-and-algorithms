@@ -1,11 +1,12 @@
-# Challenge Title
-<!-- Description of the challenge -->
+# Stack and Queue
+
+The primary goal of this assignment is to deepen your understanding of data structures by implementing a Queue in Python. This will involve creating a custom Queue class, along with associated methods to manage the queue's behavior.
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+[White Board](./whiteboard.png)
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-## Solution
-<!-- Show how to run your code, and examples of it in action -->
+* __Time Complexity:__ __O(1)__ for each operation makes the queue highly efficient for enqueue and dequeue operations.
+__Space Complexity:__ O(N) in the worst case, where N is the number of elements in the queue.
+
