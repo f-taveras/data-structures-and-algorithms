@@ -12,4 +12,5 @@
 * [Challenge 05](./python/docs/linked-list/README.md)
 * [Challenge 07](./python/docs/linked_list_kth/README.md)
 * [Challenge 08](./python/docs/linked_list_zip/README.md)
+* [Challenge 10](./python/docs/stack_and_queue/README.md)
  
