@@ -16,3 +16,4 @@
 
 * [Challenge 11](./python/docs/stack_queue_pseudo/README.md)
 * [Challenge 15](./python/docs/trees/README.md)
+* [Challenge 30](./python/docs/trees/README.md)
