@@ -1,5 +1,8 @@
 import pytest
-from code_challenges.hashtable_repeated_word import first_repeated_word
+
+from python.code_challenges.hashtable_repeated_word import first_repeated_word
+
+# from code_challenges.hashtable_repeated_word import first_repeated_word
 
 
 @pytest.mark.skip("TODO")
